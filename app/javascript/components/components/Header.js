@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/ApartmentLogo.png'
 
 class Header extends Component {
   render () {
@@ -12,7 +13,7 @@ class Header extends Component {
       <>
         <header>
             <NavLink to="/">
-                <h1>Apartment App</h1>
+                <img src={logo} alt="apartment app logo" className="logo"/>
             </NavLink>
             <div className="nav-bar">
                 <ul>

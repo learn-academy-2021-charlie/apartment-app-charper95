@@ -5,11 +5,9 @@
 
 /* Header */
 header {
-    background-color: rgb(0, 132, 255);
+    background-color: #2f9bff;
     display: flex;
     justify-content: space-between;
-    /* position: fixed; */
-    /* width: 100%; */
     padding: 15px;
 }
 
@@ -23,8 +21,15 @@ header {
     margin: 10px;
     color: black;
     text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-link:hover {
-    color: coral;
+    color: rgb(255, 127, 80);
+}
+
+.logo {
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 20px;
 }
