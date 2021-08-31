@@ -11,4 +11,4 @@ describe("When the Header Renders", () => {
       const headerNav = header.find("ul")
       expect(headerNav.length).toEqual(2)
     })
-  })
+})

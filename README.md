@@ -206,3 +206,10 @@ edrooms: 2, bathrooms: 3, pets: 'all pets welcome'
 
 - In app/javascript/components/components
     - Create Header.test.js
+
+### Read Functionality
+- Story: As an un-registered guest on the website, I can go to a web page and see a list of available apartments. Apartments have: a street designation, a city, state, a manager's name, manager's contact email, monthly rental price, bedrooms, bathrooms, and whether they allow pets
+    - Index
+        - Have an index page but nothing on it yet
+- Story: As an un-registered guest on the website, I can click on an apartment to view its details
+    - Show
