@@ -1,13 +1,13 @@
 import React, { Component } from "react"
 
-class ApartmentIndex extends Component {
+class ApartmentEdit extends Component {
   render () {
     return (
       <div className="page container">
-        <h3 className="text-center">Apartment Index</h3>
+        <h3 className="text-center">Edit an Apartment</h3>
       </div>
     );
   }
 }
 
-export default ApartmentIndex
+export default ApartmentEdit
