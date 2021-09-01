@@ -17,7 +17,7 @@ class Header extends Component {
             </NavLink>
             <div className="nav-bar">
                 <ul>
-                    <NavLink to="/apartmentIndex" className="nav-link">See All the Apartments</NavLink>
+                    <NavLink to="/apartmentindex" className="nav-link">See All the Apartments</NavLink>
                 </ul>
                 <ul>
                     { logged_in &&

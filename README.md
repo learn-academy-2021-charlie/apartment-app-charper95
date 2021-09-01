@@ -207,6 +207,9 @@ edrooms: 2, bathrooms: 3, pets: 'all pets welcome'
 - In app/javascript/components/components
     - Create Header.test.js
 
+### Frontend Structure
+- 
+
 ### Read Functionality
 - Story: As an un-registered guest on the website, I can go to a web page and see a list of available apartments. Apartments have: a street designation, a city, state, a manager's name, manager's contact email, monthly rental price, bedrooms, bathrooms, and whether they allow pets
     - Index

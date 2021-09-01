@@ -1,0 +1,76 @@
+@import 'bootstrap';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #2f9bff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav-bar ul {
+    padding-left: 0;
+}
+
+.nav-link {
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-link:hover {
+    color: rgb(255, 127, 80);
+}
+
+.logo {
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #2f9bff;
+    color: black;
+    padding: 0.5em 0 0.5em;
+}
+  
+footer > p {
+    margin-bottom: 0;
+}
+
+/* Pages */
+.page {
+    min-height: 67.9vh;
+  }
+
+.page h3{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    // text-align: center;
+}
+
+/* Not Found */
+.not-found-image {
+    height: 75vh;
+}
+
+.not-found-image img {
+    // display: flex;
+    // justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
