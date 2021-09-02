@@ -53,24 +53,29 @@ footer > p {
 
 /* Pages */
 .page {
-    min-height: 67.9vh;
-  }
+    min-height: 78.4vh;
+}
+
 
 .page h3{
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    // text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* Not Found */
 .not-found-image {
-    height: 75vh;
+    height: 78.4vh;
 }
 
 .not-found-image img {
-    // display: flex;
-    // justify-content: center;
     height: 100%;
     width: 100%;
     background-size: cover;
+}
+
+/* Home */
+
+.home-header {
+    display: flex;
+    justify-content: center;
 }
