@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   render () {
-    console.log(this.state.apartments)
+    // console.log(this.state.apartments)
     const {
       logged_in,
       current_user,
