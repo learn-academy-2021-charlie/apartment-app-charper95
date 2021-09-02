@@ -7,7 +7,6 @@ import ApartmentIndex from "./pages/ApartmentIndex";
 import ApartmentShow from "./pages/ApartmentShow";
 import ApartmentNew from "./pages/ApartmentNew";
 import ApartmentEdit from "./pages/ApartmentEdit";
-import NotFound from "./pages/NotFound";
 
 Enzyme.configure({ adapter: new Adapter() });
 
