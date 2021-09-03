@@ -35,7 +35,7 @@ class ApartmentNew extends Component {
 
   render () {
     return (
-      <div className="page container">
+      <div className="page-new container">
         <h3 className="text-center">Create an Apartment</h3>
         <Form>
         <br/>
