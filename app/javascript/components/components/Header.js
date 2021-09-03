@@ -20,6 +20,9 @@ class Header extends Component {
                     <NavLink to="/apartmentindex" className="nav-link">See All the Apartments</NavLink>
                 </ul>
                 <ul>
+                    <NavLink to="/apartmentnew" className="nav-link">Create New Apartment</NavLink>
+                </ul>
+                <ul>
                     { logged_in &&
                     <div>
                         <a href={ sign_out_route } className="nav-link">Sign Out</a>
