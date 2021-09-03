@@ -23,6 +23,10 @@ class App extends Component {
     }
   }
 
+  createApartment = (newApartment) =>{
+    console.log(newApartment)
+  }
+
   render () {
     // console.log(this.state.apartments)
     const {
@@ -49,7 +53,7 @@ class App extends Component {
             const apartment = this.state.apartments.find(apartment => apartment.id === +id)
             return <ApartmentShow apartment={apartment} />
           }} />
-          <Route path="/apartmentnew" component={ApartmentNew} />
+          <Route path="/apartmentnew" render={(props) => <ApartmentNew createApartment={this.createApartment} />} />
           <Route path="/apartmentedit" component={ApartmentEdit} />
           <Route component={NotFound} />
         </Switch>

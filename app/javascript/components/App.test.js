@@ -3,9 +3,6 @@ import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import App from "./App";
 import Home from "./pages/Home";
-import ApartmentIndex from "./pages/ApartmentIndex";
-import ApartmentShow from "./pages/ApartmentShow";
-import ApartmentNew from "./pages/ApartmentNew";
 import ApartmentEdit from "./pages/ApartmentEdit";
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -53,7 +50,7 @@ describe("when app renders", () => {
         const renderedNewRoute = renderedApp.find('[path="/apartmentnew"]')
     
         //assert
-        expect(renderedNewRoute.props().component).toEqual(ApartmentNew)
+        expect(renderedNewRoute.props().path).toEqual('/apartmentnew')
       })
 
       it("provides a route to ApartmentEdit component", () => { 
