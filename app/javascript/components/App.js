@@ -7,7 +7,6 @@ import ApartmentNew from "./pages/ApartmentNew"
 import ApartmentShow from "./pages/ApartmentShow"
 import ApartmentEdit from "./pages/ApartmentEdit"
 import NotFound from "./pages/NotFound"
-import apartments from "./mockApartments"
 
 import {
   BrowserRouter as  Router,
@@ -19,16 +18,36 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      apartments: apartments
+      apartments: []
     }
+  }
+  
+  componentDidMount() {
+    this.readApartment()
+  }
+
+  readApartment = () => {
+    fetch("http://localhost:3000/apartments")
+    .then(response => response.json())
+    .then(apartmentArray => this.setState({ apartments: apartmentArray }))
+    .catch(errors => console.log("Apartment read errors:", errors))
   }
 
   createApartment = (newApartment) =>{
-    console.log(newApartment)
+    fetch("http://localhost:3000/apartments", {
+      body: JSON.stringify(newApartment),
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then(payload => this.readApartment())
+    .catch(errors => console.log("Apartment create errors:", errors))
   }
 
   render () {
-    // console.log(this.state.apartments)
+    console.log(this.state.apartments)
     const {
       logged_in,
       current_user,

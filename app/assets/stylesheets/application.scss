@@ -127,3 +127,19 @@ footer > p {
     color: white;
     text-decoration: none;
   }
+
+  .form-button {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+  }
+
+  /* Form */
+  form {
+
+  }
+
+  .form-group {
+      text-align: center;
+      min-width: 300px;
+  }

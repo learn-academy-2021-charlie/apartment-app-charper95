@@ -7,15 +7,15 @@ class ApartmentNew extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      form: {
+      apartment: {
         street: "",
         city: "", 
         state: "", 
         manager: "", 
         email: "", 
         price: "", 
-        bedrooms: "", 
-        bathrooms: "", 
+        bedrooms: 0, 
+        bathrooms: 0, 
         pets: ""
       },
       submitted: false
@@ -23,13 +23,13 @@ class ApartmentNew extends Component {
   }
 
   handleChange = (e) =>{
-    let {form} = this.state
-    form[e.target.name] = e.target.value
-    this.setState({form: form})
+    let {apartment} = this.state
+    apartment[e.target.name] = e.target.value
+    this.setState({apartment: apartment})
   }
 
   handleSubmit = () => {
-    this.props.createApartment(this.state.form)
+    this.props.createApartment(this.state.apartment)
     this.setState({submitted: true})
   }
 
@@ -45,7 +45,7 @@ class ApartmentNew extends Component {
               type="text" 
               name="street"
               onChange={this.handleChange} 
-              value={this.state.form.street}
+              value={this.state.apartment.street}
             />
           </FormGroup>
           <br/>
@@ -55,7 +55,7 @@ class ApartmentNew extends Component {
               type="text" 
               name="city"
               onChange={this.handleChange} 
-              value={this.state.form.city}
+              value={this.state.apartment.city}
             />
           </FormGroup>
           <br/>
@@ -65,7 +65,7 @@ class ApartmentNew extends Component {
               type="text" 
               name="state"
               onChange={this.handleChange} 
-              value={this.state.form.state}
+              value={this.state.apartment.state}
             />
           </FormGroup>
           <br/>
@@ -75,7 +75,7 @@ class ApartmentNew extends Component {
               type="text" 
               name="manager"
               onChange={this.handleChange} 
-              value={this.state.form.manager}
+              value={this.state.apartment.manager}
             />
           </FormGroup>
           <br/>
@@ -85,7 +85,7 @@ class ApartmentNew extends Component {
               type="text" 
               name="email"
               onChange={this.handleChange} 
-              value={this.state.form.email}
+              value={this.state.apartment.email}
             />
           </FormGroup>
           <br/>
@@ -95,27 +95,27 @@ class ApartmentNew extends Component {
               type="text" 
               name="price"
               onChange={this.handleChange} 
-              value={this.state.form.price}
+              value={this.state.apartment.price}
             />
           </FormGroup>
           <br/>
           <FormGroup>
             <Label for="bedrooms">Bedrooms</Label>
             <Input 
-              type="number" 
+              type="integer" 
               name="bedrooms"
               onChange={this.handleChange} 
-              value={this.state.form.bedrooms}
+              value={this.state.apartment.bedrooms}
             />
           </FormGroup>
           <br/>
           <FormGroup>
             <Label for="bathrooms">Bathrooms</Label>
             <Input 
-              type="number" 
+              type="integer" 
               name="bathrooms"
               onChange={this.handleChange} 
-              value={this.state.form.bathrooms}
+              value={this.state.apartment.bathrooms}
             />
           </FormGroup>
           <br/>
@@ -125,11 +125,13 @@ class ApartmentNew extends Component {
               type="text" 
               name="pets"
               onChange={this.handleChange} 
-              value={this.state.form.pets}
+              value={this.state.apartment.pets}
             />
           </FormGroup>
           <br/>
+          <div className="form-button">
           <Button name="submit" color="primary" onClick={this.handleSubmit}>Create new Apartment</Button>
+          </div>
         </Form>
         {this.state.submitted && <Redirect to="/apartmentindex"/>}
       </div>
