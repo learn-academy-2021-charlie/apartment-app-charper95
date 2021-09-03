@@ -9,7 +9,7 @@ describe("When the Header Renders", () => {
     it("displays a navigation bar", () => {
       const header = shallow(<Header />)
       const headerNav = header.find("ul")
-      expect(headerNav.length).toEqual(2)
+      expect(headerNav.length).toEqual(3)
     })
     it("displays a logo image", () => {
       const header = shallow(<Header/>)
