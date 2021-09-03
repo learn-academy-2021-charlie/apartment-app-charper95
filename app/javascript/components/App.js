@@ -8,6 +8,7 @@ import ApartmentShow from "./pages/ApartmentShow"
 import ApartmentEdit from "./pages/ApartmentEdit"
 import NotFound from "./pages/NotFound"
 
+
 import {
   BrowserRouter as  Router,
   Route,
@@ -72,7 +73,6 @@ class App extends Component {
   }
 
   render () {
-    console.log(this.state.apartments)
     const {
       logged_in,
       current_user,
