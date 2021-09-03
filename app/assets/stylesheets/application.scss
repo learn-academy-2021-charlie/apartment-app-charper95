@@ -78,4 +78,52 @@ footer > p {
 .home-header {
     display: flex;
     justify-content: center;
+    color: black;
 }
+
+ /* Index */
+ @media (min-width: 576px) {
+    div.card-group {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  
+  div.card-group {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  
+  }
+  
+  div.card {
+    min-width: 300px;
+    border: #ff7f50 2px solid; 
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  div.card-body {
+    max-width: 290px;
+    text-align: center;
+  }
+  
+  @media (min-width: 576px) {
+    div.card-group>.card+.card {
+        margin-left: 0; 
+        border-left: #ff7f50 2px solid; 
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+
+  /* Button */
+  .index-button-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .index-button-link:hover {
+    color: white;
+    text-decoration: none;
+  }

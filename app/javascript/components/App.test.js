@@ -7,7 +7,6 @@ import ApartmentIndex from "./pages/ApartmentIndex";
 import ApartmentShow from "./pages/ApartmentShow";
 import ApartmentNew from "./pages/ApartmentNew";
 import ApartmentEdit from "./pages/ApartmentEdit";
-import NotFound from "./pages/NotFound";
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -38,17 +37,15 @@ describe("when app renders", () => {
       it("provides a route to ApartmentIndex component", () => { 
         //act
         const renderedIndexRoute = renderedApp.find('[path="/apartmentindex"]')
-    
         //assert
-        expect(renderedIndexRoute.props().component).toEqual(ApartmentIndex)
+        expect(renderedIndexRoute.props().path).toEqual('/apartmentindex')
       })
 
       it("provides a route to ApartmentShow component", () => { 
         //act
-        const renderedShowRoute = renderedApp.find('[path="/apartmentshow"]')
-    
+        const renderedShowRoute = renderedApp.find('[path="/apartmentshow/:id"]')
         //assert
-        expect(renderedShowRoute.props().component).toEqual(ApartmentShow)
+        expect(renderedShowRoute.props().path).toEqual('/apartmentshow/:id')
       })
 
       it("provides a route to ApartmentNew component", () => { 

@@ -9,6 +9,6 @@ describe("When the Home Page Renders", () => {
     it("displays a background image", () => {
       const home = shallow(<Home />)
       const homeImg = home.find('div').at(1).props().style
-      expect(homeImg.backgroundImage).toEqual('url(this is mock pic)')
+      expect(homeImg.backgroundImage).toEqual('linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(this is mock pic)')
     })
 })
